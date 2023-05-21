@@ -57,7 +57,6 @@ while True:
             for i, circle in enumerate(circles):
                 cv2.circle(frame, (circle[0], circle[1]),
                            circle[2], (0, 255, 0), 2)
-                
 
                 # Adiciona as informações do objeto ao dataframe
                 df = df._append({'Frame': cap.get(cv2.CAP_PROP_POS_FRAMES),
@@ -80,7 +79,7 @@ while True:
         break
 
 # Salva as informações do dataframe em um arquivo CSV
-df.to_csv('informacoes_objetos_00.csv', index=False)
+df.to_csv('informacoes_objetos_01.csv', index=False)
 
 # Libera os recursos utilizados pelo OpenCV
 cap.release()
